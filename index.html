@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rashik Tayal | Portfolio</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: "Segoe UI", sans-serif;
+            background: #111;
+            color: white;
+        }
+
+        /* Navbar */
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            padding: 20px 40px;
+            background: #000;
+            position: sticky;
+            top: 0;
+            z-index: 10;
+        }
+        .navbar a {
+            color: #f5c542;
+            margin-left: 20px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        /* Header / Hero Section */
+        .hero {
+            text-align: center;
+            padding: 80px 20px;
+            background: linear-gradient(to right, #000, #333);
+            animation: fadeIn 1.5s ease-in-out;
+        }
+
+        .hero h1 {
+            font-size: 48px;
+            margin-bottom: 10px;
+        }
+
+        .hero p {
+            font-size: 20px;
+            color: #f5c542;
+        }
+
+        /* Sections */
+        .section {
+            max-width: 900px;
+            margin: 40px auto;
+            background: #1a1a1a;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 0 10px rgba(255,255,255,0.1);
+            animation: slideUp 1s ease;
+        }
+
+        h2 {
+            border-left: 4px solid #f5c542;
+            padding-left: 12px;
+            font-size: 26px;
+        }
+
+        /* Cards */
+        .card {
+            background: #222;
+            border-radius: 10px;
+            padding: 20px;
+            margin: 15px 0;
+            box-shadow: 0 0 8px rgba(255,255,255,0.08);
+        }
+
+        .footer {
+            text-align: center;
+            padding: 20px;
+            background: #000;
+            margin-top: 50px;
+            color: #bbb;
+        }
+
+        /* Animations */
+        @keyframes fadeIn {
+            from {opacity: 0;}
+            to {opacity: 1;}
+        }
+
+        @keyframes slideUp {
+            from {transform: translateY(20px); opacity: 0;}
+            to {transform: translateY(0); opacity: 1;}
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <div class="navbar">
+        <div><strong>Rashik</strong></div>
+        <div>
+            <a href="#about">About</a>
+            <a href="#research">Research</a>
+            <a href="#achievements">Achievements</a>
+            <a href="#blog">Blog</a>
+        </div>
+    </div>
+
+    <!-- Hero -->
+    <div class="hero">
+        <h1>Rashik Tayal</h1>
+        <p>Young Researcher | JEE Aspirant | Psychology, Cricket & Geopolitics Enthusiast</p>
+    </div>
+
+    <!-- About -->
+    <div class="section" id="about">
+        <h2>About Me</h2>
+        <p>
+            I’m a young independent researcher and JEE aspirant who loves studying patterns — 
+            whether it's human psychology, global geopolitics, or cricket analytics.  
+            I believe in deep thinking, self-growth, and creating value through knowledge.
+        </p>
+    </div>
+
+    <!-- Research Interests -->
+    <div class="section" id="research">
+        <h2>Research Interests</h2>
+        
+        <div class="card">• Mathematics & Problem Solving</div>
+        <div class="card">• Psychology & Behaviour Analysis</div>
+        <div class="card">• Cricket Analytics & Pattern Recognition</div>
+        <div class="card">• Geopolitics & Strategic Affairs</div>
+    </div>
+
+    <!-- Achievements -->
+    <div class="section" id="achievements">
+        <h2>Achievements</h2>
+
+        <div class="card">
+            • Completed multiple research projects at a young age  
+        </div>
+
+        <div class="card">
+            • Received interest from international academic journals (China, Germany)
+        </div>
+
+        <div class="card">
+            • Strong academic grounding in Physics, Chemistry & Mathematics
+        </div>
+    </div>
+
+    <!-- Blog -->
+    <div class="section" id="blog">
+        <h2>Blog</h2>
+        <p>Coming soon… insights on psychology, cricket breakdowns, research ideas and personal journey.</p>
+    </div>
+
+    <div class="footer">
+        © 2025 | Built by Rashik Tayal
+    </div>
+
+</body>
+</html>
