@@ -6,8 +6,12 @@
     <title>Rashik Tayal | Portfolio</title>
 
     <style>
-        body {
+        html, body {
             margin: 0;
+            padding: 0;
+            height: 100%;
+            overflow-x: hidden;
+            scroll-behavior: smooth;
             font-family: "Segoe UI", sans-serif;
             background: #111;
             color: white;
@@ -30,19 +34,16 @@
             font-weight: bold;
         }
 
-        /* Header / Hero Section */
+        /* Hero */
         .hero {
             text-align: center;
             padding: 80px 20px;
             background: linear-gradient(to right, #000, #333);
-            animation: fadeIn 1.5s ease-in-out;
         }
-
         .hero h1 {
             font-size: 48px;
             margin-bottom: 10px;
         }
-
         .hero p {
             font-size: 20px;
             color: #f5c542;
@@ -56,9 +57,7 @@
             padding: 30px;
             border-radius: 12px;
             box-shadow: 0 0 10px rgba(255,255,255,0.1);
-            animation: slideUp 1s ease;
         }
-
         h2 {
             border-left: 4px solid #f5c542;
             padding-left: 12px;
@@ -74,6 +73,7 @@
             box-shadow: 0 0 8px rgba(255,255,255,0.08);
         }
 
+        /* Footer */
         .footer {
             text-align: center;
             padding: 20px;
@@ -82,15 +82,22 @@
             color: #bbb;
         }
 
-        /* Animations */
-        @keyframes fadeIn {
-            from {opacity: 0;}
-            to {opacity: 1;}
+        /* Optional Card Animations (safe, won't break scroll) */
+        .card {
+            opacity: 0;
+            transform: translateY(20px);
+            animation: slideUp 0.8s ease forwards;
         }
+        .card:nth-child(1) { animation-delay: 0.1s; }
+        .card:nth-child(2) { animation-delay: 0.2s; }
+        .card:nth-child(3) { animation-delay: 0.3s; }
+        .card:nth-child(4) { animation-delay: 0.4s; }
 
         @keyframes slideUp {
-            from {transform: translateY(20px); opacity: 0;}
-            to {transform: translateY(0); opacity: 1;}
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
         }
     </style>
 </head>
@@ -119,15 +126,13 @@
         <h2>About Me</h2>
         <p>
             I’m a young independent researcher and JEE aspirant who loves studying patterns — 
-            whether it's human psychology, global geopolitics, or cricket analytics.  
-            I believe in deep thinking, self-growth, and creating value through knowledge.
+            whether it's human psychology, global geopolitics, or cricket analytics.
         </p>
     </div>
 
-    <!-- Research Interests -->
+    <!-- Research -->
     <div class="section" id="research">
         <h2>Research Interests</h2>
-        
         <div class="card">• Mathematics & Problem Solving</div>
         <div class="card">• Psychology & Behaviour Analysis</div>
         <div class="card">• Cricket Analytics & Pattern Recognition</div>
@@ -137,18 +142,9 @@
     <!-- Achievements -->
     <div class="section" id="achievements">
         <h2>Achievements</h2>
-
-        <div class="card">
-            • Completed multiple research projects at a young age  
-        </div>
-
-        <div class="card">
-            • Received interest from international academic journals (China, Germany)
-        </div>
-
-        <div class="card">
-            • Strong academic grounding in Physics, Chemistry & Mathematics
-        </div>
+        <div class="card">• Completed multiple research projects at a young age</div>
+        <div class="card">• Received interest from international academic journals (China, Germany)</div>
+        <div class="card">• Strong academic grounding in PCM</div>
     </div>
 
     <!-- Blog -->
@@ -160,6 +156,13 @@
     <div class="footer">
         © 2025 | Built by Rashik Tayal
     </div>
+
+    <!-- Force scroll to top on every device -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            setTimeout(() => { window.scrollTo(0, 0); }, 50);
+        });
+    </script>
 
 </body>
 </html>
