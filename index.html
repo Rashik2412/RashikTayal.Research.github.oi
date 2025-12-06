@@ -6,11 +6,12 @@
     <title>Rashik Tayal | Portfolio</title>
 
     <style>
-        body {
+        html, body {
             margin: 0;
             font-family: "Segoe UI", sans-serif;
             background: #111;
             color: white;
+            scroll-behavior: auto; /* Fix for auto-scrolling issue */
         }
 
         /* Navbar */
@@ -35,7 +36,8 @@
             text-align: center;
             padding: 80px 20px;
             background: linear-gradient(to right, #000, #333);
-            animation: fadeIn 1.5s ease-in-out;
+            opacity: 0;
+            animation: fadeIn 0.8s ease-in forwards;
         }
 
         .hero h1 {
@@ -56,7 +58,8 @@
             padding: 30px;
             border-radius: 12px;
             box-shadow: 0 0 10px rgba(255,255,255,0.1);
-            animation: slideUp 1s ease;
+            opacity: 0;
+            animation: fadeIn 1.2s ease-in forwards;
         }
 
         h2 {
@@ -84,15 +87,18 @@
 
         /* Animations */
         @keyframes fadeIn {
-            from {opacity: 0;}
-            to {opacity: 1;}
-        }
-
-        @keyframes slideUp {
-            from {transform: translateY(20px); opacity: 0;}
-            to {transform: translateY(0); opacity: 1;}
+            0% {opacity: 0; transform: translateY(0);}
+            100% {opacity: 1; transform: translateY(0);}
         }
     </style>
+
+    <!-- Force page load at top fix -->
+    <script>
+        window.onload = function() {
+            window.scrollTo(0, 0);
+        };
+    </script>
+
 </head>
 
 <body>
