@@ -6,12 +6,12 @@
     <title>Rashik Tayal | Portfolio</title>
 
     <style>
-        html, body {
+        body {
             margin: 0;
             font-family: "Segoe UI", sans-serif;
             background: #111;
             color: white;
-            scroll-behavior: auto; /* Fix for auto-scrolling issue */
+            scroll-behavior: smooth;
         }
 
         /* Navbar */
@@ -31,17 +31,15 @@
             font-weight: bold;
         }
 
-        /* Header / Hero Section */
+        /* Hero */
         .hero {
             text-align: center;
-            padding: 80px 20px;
+            padding: 90px 20px;
             background: linear-gradient(to right, #000, #333);
-            opacity: 0;
-            animation: fadeIn 0.8s ease-in forwards;
         }
 
         .hero h1 {
-            font-size: 48px;
+            font-size: 46px;
             margin-bottom: 10px;
         }
 
@@ -50,7 +48,7 @@
             color: #f5c542;
         }
 
-        /* Sections */
+        /* Section */
         .section {
             max-width: 900px;
             margin: 40px auto;
@@ -58,8 +56,6 @@
             padding: 30px;
             border-radius: 12px;
             box-shadow: 0 0 10px rgba(255,255,255,0.1);
-            opacity: 0;
-           
         }
 
         h2 {
@@ -68,7 +64,7 @@
             font-size: 26px;
         }
 
-        /* Cards */
+        /* Card */
         .card {
             background: #222;
             border-radius: 10px;
@@ -84,17 +80,7 @@
             margin-top: 50px;
             color: #bbb;
         }
-
-        /* Animations */
-        @keyframes fadeIn {
-            0% {opacity: 0; transform: translateY(0);}
-            100% {opacity: 1; transform: translateY(0);}
-        }
     </style>
-
-    <!-- Force page load at top fix -->
-   
-
 </head>
 
 <body>
@@ -120,16 +106,15 @@
     <div class="section" id="about">
         <h2>About Me</h2>
         <p>
-            I’m a young independent researcher and JEE aspirant who loves studying patterns — 
-            whether it's human psychology, global geopolitics, or cricket analytics.  
-            I believe in deep thinking, self-growth, and creating value through knowledge.
+            I’m a young independent researcher and JEE aspirant who loves studying patterns —
+            human psychology, global geopolitics, cricket data or maths — I go deep into everything.
         </p>
     </div>
 
-    <!-- Research Interests -->
+    <!-- Research -->
     <div class="section" id="research">
         <h2>Research Interests</h2>
-        
+
         <div class="card">• Mathematics & Problem Solving</div>
         <div class="card">• Psychology & Behaviour Analysis</div>
         <div class="card">• Cricket Analytics & Pattern Recognition</div>
@@ -140,23 +125,15 @@
     <div class="section" id="achievements">
         <h2>Achievements</h2>
 
-        <div class="card">
-            • Completed multiple research projects at a young age  
-        </div>
-
-        <div class="card">
-            • Received interest from international academic journals (China, Germany)
-        </div>
-
-        <div class="card">
-            • Strong academic grounding in Physics, Chemistry & Mathematics
-        </div>
+        <div class="card">• Completed multiple research projects at a young age</div>
+        <div class="card">• Received interest from international journals (China, Germany)</div>
+        <div class="card">• Strong academic foundation (PCM)</div>
     </div>
 
     <!-- Blog -->
     <div class="section" id="blog">
         <h2>Blog</h2>
-        <p>Coming soon… insights on psychology, cricket breakdowns, research ideas and personal journey.</p>
+        <p>Coming soon… deep thoughts, research ideas & breakdowns.</p>
     </div>
 
     <div class="footer">
@@ -165,3 +142,4 @@
 
 </body>
 </html>
+
